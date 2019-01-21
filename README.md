@@ -28,7 +28,8 @@ In your script call `SimpleUIDialog.ShowDialog()`
 You do not need to any prefab on the scene, it will be auto loaded by the script itself and assigned to do not be destroyed.
 
 ### Functions
-Parameters you can set in ShowDialog()
+`ShowDialog()`
+Parameters
 -	Title
 -	Content
 -	Buttons (Delegates and Button Text)
@@ -36,7 +37,10 @@ Parameters you can set in ShowDialog()
 -	Highlighted Button
 After any button is clicked, the dialog will automatically close
 
-Additional Parameters that is set on the dialog prefab is at
+`Dispose()`
+Destroys SimpleUIDialog from scene, free-ing up memory. Can be reinstantated by calling any static methods
+
+Additional Settings is on the Prefab at
 > Assets/Resource/SUPERLASER/SimpleUIPrompt/SimpleUIPromptCanvas
 -	Accent Color (Highlight color)
 -	Animation Spd
@@ -54,11 +58,15 @@ In your script call `SimpleUIToast.ShowToast()`
 You do not need to any prefab on the scene, it will be auto loaded by the script itself and assigned to do not be destroyed.
 
 ### Functions
-Parameters you can set in ShowDialog()
+`ShowToast()`
+Parameters
 -	Duration ( Up Time )
 After the up time, toast will close automatically
 
-Additional Parameters that is set on the dialog prefab is at
+`Dispose()`
+Destroys SimpleUIDialog from scene, free-ing up memory. Can be reinstantated by calling any static methods
+
+Prefab is found at
 > Assets/Resource/SUPERLASER/SimpleUIPrompt/SimpleUIPromptCanvas
 
 * To change the scaling of the UI, Modify the Scale Factor on the Canvas Scaler on the Prefab
