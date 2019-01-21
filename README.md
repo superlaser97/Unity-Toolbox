@@ -20,7 +20,7 @@ ___
 
 ___
 
-![alt text](https://github.com/superlaser97/Unity-Toolbox/blob/master/Assets/SUPERLASER/SimpleUIPrompt/README_Header.PNG "Logo Title Text 1")
+![alt text](https://github.com/superlaser97/Unity-Toolbox/blob/master/Assets/SUPERLASER/SimpleUIPrompt/README_Header.PNG "SimpleUIDialog")
 ## SimpleUIDialog
 Easy way to show beautifully designed dialog with deletaged buttons. Supports multiple dialog calls at the same time
 
@@ -51,7 +51,7 @@ Additional Settings is on the Prefab at
 
 ___
 
-
+![alt text](https://github.com/superlaser97/Unity-Toolbox/blob/master/Assets/SUPERLASER/SimpleUIToast/README_Header.PNG "SimpleUIToast")
 ## SimpleUIToast
 Easy way to show Toast with nice animations. Supports multiple toast at the same time
 
