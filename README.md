@@ -1,6 +1,11 @@
 # Unity-Toolbox
 Documentation on what and how to use these tools
 
+## Included Tools
+- SimpleUIDIalog
+- SimpleUIToast
+- DebugTools
+
 ## Requirements: 
 -	Unity 2018.1 and above
 -	Half a brain
