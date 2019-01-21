@@ -10,7 +10,6 @@ Documentation on what and how to use these tools
 - Versioning
 - Feature Flags
 - AsyncSceneLoader
-- UI2PointAnimator
 
 ___
 
