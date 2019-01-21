@@ -6,7 +6,7 @@ Requirements:
 -	Half a brain
 
 # SimpleUIDialog
-In your script and call SimpleUIDialog.ShowDialog(); 
+In your script call `SimpleUIDialog.ShowDialog()`
 You do not need to any prefab on the scene, it will be auto loaded by the script itself and assigned to do not be destroyed.
 These are the parameters you can set in ShowDialog()
 -	Title
