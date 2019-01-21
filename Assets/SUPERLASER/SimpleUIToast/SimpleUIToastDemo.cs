@@ -14,12 +14,12 @@ namespace SUPERLASER
     {
         public void ToastA()
         {
-            SimpleUIToast.ShowToast("Toast A");
+            SimpleUIToast.ShowToast("Toast with default up duration");
         }
         
         public void ToastB()
         {
-            SimpleUIToast.ShowToast("Toast B");
+            SimpleUIToast.ShowToast("Toast with 0.5s up duration", 0.5f);
         }
     }
 }

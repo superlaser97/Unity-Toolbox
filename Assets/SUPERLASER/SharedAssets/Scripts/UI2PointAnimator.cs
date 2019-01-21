@@ -21,7 +21,6 @@ namespace SUPERLASER
         [SerializeField] private Vector2 destPos;
         [Space(10)]
         [SerializeField] private bool useScaleAnim = false;
-        public float ExpandedScale { get; set; } = 1f;
         public float AnimateSpd { get; set; } = 20f;
 
         private Coroutine animationCoroutine;
@@ -96,7 +95,7 @@ namespace SUPERLASER
         {
             if (!toBeginning)
             {
-                transform.localScale = new Vector2(ExpandedScale, ExpandedScale);
+                transform.localScale = new Vector2(1, 1);
                 while (transform.localScale.x > 0.05f)
                 {
                     float newScale = Mathf.Lerp(transform.localScale.x, 0, Time.deltaTime * AnimateSpd);
@@ -108,13 +107,13 @@ namespace SUPERLASER
             else
             {
                 transform.localScale = new Vector2(0, 0);
-                while (transform.localScale.x < ExpandedScale - 0.05f)
+                while (transform.localScale.x < 1 - 0.05f)
                 {
-                    float newScale = Mathf.Lerp(transform.localScale.x, ExpandedScale, Time.deltaTime * AnimateSpd);
+                    float newScale = Mathf.Lerp(transform.localScale.x, 1, Time.deltaTime * AnimateSpd);
                     transform.localScale = new Vector2(newScale, newScale);
                     yield return null;
                 }
-                transform.localScale = new Vector2(ExpandedScale, ExpandedScale);
+                transform.localScale = new Vector2(1, 1);
             }
             atBeginning = !atBeginning;
 

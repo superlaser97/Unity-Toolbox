@@ -23,7 +23,7 @@ namespace SUPERLASER
                 {
                     GameObject prefab = Resources.Load<GameObject>(PREFAB_PATH);
                     if (prefab)
-                        return Instantiate(prefab).GetComponent<SimpleUIPrompt>();
+                        return instance = Instantiate(prefab).GetComponent<SimpleUIPrompt>();
                     else
                     {
                         Debug.LogError($"Cant find SimpleUIPrompt at {PREFAB_PATH}");
@@ -46,7 +46,6 @@ namespace SUPERLASER
         [Space(10)]
 
         [SerializeField] private Color accentColor;
-        [SerializeField] private float dialogScale = 1;
         [SerializeField] private float animationSpd = 20;
 
         private class SimpleUIDialogContent
@@ -70,7 +69,6 @@ namespace SUPERLASER
                 Destroy(gameObject);
 
             DontDestroyOnLoad(gameObject);
-            dialogPanelAnimator.ExpandedScale = dialogScale;
             dialogPanelAnimator.AnimateSpd = animationSpd;
             gameObject.name = "SimpleUIPromptCanvas";
         }
@@ -105,13 +103,6 @@ namespace SUPERLASER
             };
 
             Instance.uiDialogContentQueue.Enqueue(dialogContent);
-        }
-
-        // Destroys the Dialog GameObject from scene to free up memory
-        public static void Dispose()
-        {
-            if (instance != null)
-                Destroy(instance.gameObject);
         }
 
         private void ShowDialogFromQueue()
@@ -170,6 +161,13 @@ namespace SUPERLASER
             activeDialog = false;
             dialogPanelBG.SetActive(false);
             dialogPanelAnimator.AnimateToEnd();
+        }
+
+        // Destroys the Dialog GameObject from scene to free up memory
+        public static void Dispose()
+        {
+            if (instance != null)
+                Destroy(instance.gameObject);
         }
 
         private void OnDestroy()

@@ -42,9 +42,12 @@ public class SimpleUIToast : MonoBehaviour
 
     public static void ShowToast(string text, float duration = 1.5f)
     {
-        if (!Instance)
-            return;
+        Instance.StartCoroutine(Instance.DelayShowToast(text, duration));
+    }
 
+    private IEnumerator DelayShowToast(string text, float duration = 1.5f)
+    {
+        yield return new WaitForEndOfFrame();
         SimpleUIToastBox uiTooltipBox = Instantiate(Instance.simpleUIToastBox_Prefab, Instance.transform).GetComponent<SimpleUIToastBox>();
         uiTooltipBox.ShowTooltip(text, duration);
     }
