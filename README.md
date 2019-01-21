@@ -33,9 +33,9 @@ You do not need to any prefab on the scene, it will be auto loaded by the script
 Parameters
 -	Title
 -	Content
--	Buttons (Delegates and Button Text)
--	Show “X” Button
--	Highlighted Button
+-	Buttons (Delegates and Button Text) ( Optional )
+-	Show “X” Button ( Optional )
+-	Highlighted Button ( Optional )
 After any button is clicked, the dialog will automatically close
 
 `SimpleUIDialog.Dispose()`
@@ -62,7 +62,7 @@ You do not need to any prefab on the scene, it will be auto loaded by the script
 `SimpleUIDialog.ShowToast()`
 
 Parameters
--	Duration ( Up Time )
+-	Duration ( Up Time ) ( Optional )
 After the up time, toast will close automatically
 
 `SimpleUIDialog.Dispose()`
@@ -81,7 +81,36 @@ ___
 Transition between scene with loading indicator
 
 ### Usage
-In your script call `SceneManager.LoadScene("SceneName")`, where the parameter is the name of the scene
+In your script call `SceneManager.LoadScene()`
+
+Parameters
+- SceneName (string), Name of the Scene that you want to load
+
+### Notes
+Remember to Add these Scenes to the build before using it.
+- AsyncLoadingScene
+- Target Scenes ( Scenes you want to load )
+
+For the Demo, *DemoScene-Start* and *DemoScene-End* is the Start point and End point of the demo respectively, while *AsyncScneLoader* is the loading scene itself.
+
+___
+
+![alt text](https://github.com/superlaser97/Unity-Toolbox/blob/master/Assets/SUPERLASER/DebugTools/README_Header.PNG "DebugTools")
+## DebugTools
+- Log to dedicated debug tools console that is accessible in runtime
+- Commands that can be executed
+- FPS Counter and Stats Monitor
+- Save Logging to File
+
+### Debug Tools Console Usage
+To log, call `DebugTools.Log()`
+DebugTools is Auto Instantiated and Initialized at the start of any scene, no prefab required on the scene.
+
+Parameters
+- Log (string) , string that you want to Log
+- DebugLevel , level of debug, either NORMAL, WARNING, ERROR, COMMAND
+
+Logging through `DebugTools.Log()` will also mirror log to `UnityEngine.Debug.Log()`
 
 ### Notes
 Remember to Add these Scenes to the build before using it.
