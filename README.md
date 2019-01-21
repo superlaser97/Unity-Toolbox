@@ -1,4 +1,4 @@
-### Unity-Toolbox
+# Unity-Toolbox
 Documentation on what and how to use these tools
 
 ## Requirements: 
@@ -8,11 +8,11 @@ Documentation on what and how to use these tools
 ## SimpleUIDialog
 Easy way to show beautifully designed dialog with deletaged buttons
 
-# Usage
+### Usage
 In your script call `SimpleUIDialog.ShowDialog()`
 You do not need to any prefab on the scene, it will be auto loaded by the script itself and assigned to do not be destroyed.
 
-# Functions
+### Functions
 Parameters you can set in ShowDialog()
 -	Title
 -	Content
