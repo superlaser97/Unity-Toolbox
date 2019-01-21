@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SUPERLASER/SimpleUIPrompt/SimpleUIPromptDemo.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/SUPERLASER/AsyncSceneLoader/AsyncLoadingScene.unity
+    guid: a1faad7af7d03c344a89b24dee389462
+  - enabled: 1
+    path: Assets/SUPERLASER/AsyncSceneLoader/DemoScene-Start.unity
+    guid: 99f7118514d627e4a9c140aeb2db6626
+  - enabled: 1
+    path: Assets/SUPERLASER/AsyncSceneLoader/DemoScene-End.unity
+    guid: 1407fe2342ebf1a40a659a76b67e83b2
   m_configObjects: {}
