@@ -1,7 +1,7 @@
 # Unity-Toolbox
 Documentation on what and how to use these tools
 
-## Included Tools ( Big ones )
+## Included Kits ( Big ones )
 - SimpleUIDialog
 - SimpleUIToast
 - AsyncSceneLoader
@@ -76,6 +76,7 @@ Prefab is found at
 
 ___
 
+![alt text](https://github.com/superlaser97/Unity-Toolbox/blob/master/Assets/SUPERLASER/AsyncSceneLoader/README_Header.PNG "AsyncSceneLoader")
 ## AsyncSceneLoader
 Transition between scene with loading indicator
 
