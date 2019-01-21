@@ -20,6 +20,7 @@ ___
 
 ___
 
+![alt text](https://github.com/superlaser97/Unity-Toolbox/blob/master/Assets/SUPERLASER/SimpleUIPrompt/README_Header.PNG "Logo Title Text 1")
 ## SimpleUIDialog
 Easy way to show beautifully designed dialog with deletaged buttons. Supports multiple dialog calls at the same time
 
