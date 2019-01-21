@@ -1,7 +1,7 @@
 # Unity-Toolbox
 Documentation on what and how to use these tools
 
-## Included Tools ( Big ones )
+## Included Kits ( Big ones )
 - SimpleUIDialog
 - SimpleUIToast
 - AsyncSceneLoader
