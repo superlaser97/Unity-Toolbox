@@ -9,6 +9,8 @@ public class AsyncSceneLoader : MonoBehaviour
     [SerializeField] private Image loadingIndicator;
     [SerializeField] private Image loadingSceneBG;
 
+    private static string SceneToLoad { get; set; }
+
     private void Start()
     {
         StartCoroutine(LoadNextScene());
@@ -18,13 +20,10 @@ public class AsyncSceneLoader : MonoBehaviour
     private IEnumerator LoadNextScene()
     {
         loadingIndicator.fillAmount = 0;
+        
+        Scene newScene = SceneManager.GetSceneByName(SceneToLoad);
 
-        string sceneToLoad = PlayerPrefs.GetString("SceneToLoad");
-        Scene newScene = SceneManager.GetSceneByName(sceneToLoad);
-
-        yield return new WaitForSeconds(2);
-
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad);
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneToLoad);
 
         while (!asyncOperation.isDone)
         {
