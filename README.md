@@ -29,6 +29,7 @@ You do not need to any prefab on the scene, it will be auto loaded by the script
 
 ### Functions
 `ShowDialog()`
+
 Parameters
 -	Title
 -	Content
@@ -38,6 +39,7 @@ Parameters
 After any button is clicked, the dialog will automatically close
 
 `Dispose()`
+
 Destroys SimpleUIDialog from scene, free-ing up memory. Can be reinstantated by calling any static methods
 
 Additional Settings is on the Prefab at
@@ -59,11 +61,13 @@ You do not need to any prefab on the scene, it will be auto loaded by the script
 
 ### Functions
 `ShowToast()`
+
 Parameters
 -	Duration ( Up Time )
 After the up time, toast will close automatically
 
 `Dispose()`
+
 Destroys SimpleUIDialog from scene, free-ing up memory. Can be reinstantated by calling any static methods
 
 Prefab is found at
