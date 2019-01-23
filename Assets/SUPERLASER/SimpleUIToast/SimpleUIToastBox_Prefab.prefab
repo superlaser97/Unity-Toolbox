@@ -300,6 +300,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRect: {fileID: 0}
-  usePositionAnim: 0
-  destPos: {x: 0, y: 0}
-  useScaleAnim: 1
+  animateSpd: 20
+  animateMode: 2
+  endPosition: {x: 0, y: 0}
+  rotDir: {x: 0, y: 0, z: 0}
+  endScale: 1

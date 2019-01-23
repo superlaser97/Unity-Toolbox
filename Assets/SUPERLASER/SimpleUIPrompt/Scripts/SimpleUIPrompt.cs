@@ -36,7 +36,7 @@ namespace SUPERLASER
         [Space(10)]
 
         [SerializeField] private GameObject dialogPanelBG;
-        [SerializeField] private UI2PointAnimator dialogPanelAnimator;
+        [SerializeField] private UIAnimator dialogPanelAnimator;
         [SerializeField] private TextMeshProUGUI dialogTitle;
         [SerializeField] private TextMeshProUGUI dialogContent;
         [SerializeField] private GameObject actionBtn_Prefab;
@@ -69,7 +69,7 @@ namespace SUPERLASER
                 Destroy(gameObject);
 
             DontDestroyOnLoad(gameObject);
-            dialogPanelAnimator.AnimateSpd = animationSpd;
+            dialogPanelAnimator.ScaleAnimSpd = animationSpd;
             gameObject.name = "SimpleUIPromptCanvas";
         }
 
@@ -111,7 +111,7 @@ namespace SUPERLASER
 
             activeDialog = true;
             dialogPanelBG.SetActive(true);
-            dialogPanelAnimator.AnimateToBeginning();
+            dialogPanelAnimator.Animate_Scale(UIAnimator.Location.END);
             dialogTitle.text = targetUIDContent.dialogTitleString;
             dialogContent.text = targetUIDContent.dialogContentString;
 
@@ -160,7 +160,7 @@ namespace SUPERLASER
         {
             activeDialog = false;
             dialogPanelBG.SetActive(false);
-            dialogPanelAnimator.AnimateToEnd();
+            dialogPanelAnimator.Animate_Scale(UIAnimator.Location.INITIAL);
         }
 
         // Destroys the Dialog GameObject from scene to free up memory

@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogPanelBG: {fileID: 1655474769688004}
-  dialogPanelAnimator: {fileID: 114096411483951210}
+  dialogPanelAnimator: {fileID: 3599396948273193823}
   dialogTitle: {fileID: 6662126848560332063}
   dialogContent: {fileID: 5389285157293455959}
   actionBtn_Prefab: {fileID: 1474231523619418, guid: db772e617067ff14cbf9d1f912ec43d0, type: 3}
@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 114677426376072540}
   - component: {fileID: 114455183181117044}
   - component: {fileID: 114593834510960872}
-  - component: {fileID: 114096411483951210}
+  - component: {fileID: 3599396948273193823}
   m_Layer: 5
   m_Name: Dialog
   m_TagString: Untagged
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
---- !u!114 &114096411483951210
+--- !u!114 &3599396948273193823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -441,9 +441,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRect: {fileID: 0}
-  usePositionAnim: 0
-  destPos: {x: 0, y: 0}
-  useScaleAnim: 1
+  animateSpd: 20
+  animateMode: 2
+  endPosition: {x: 0, y: 0}
+  rotDir: {x: 0, y: 0, z: 0}
+  endScale: 1
 --- !u!1 &1655474769688004
 GameObject:
   m_ObjectHideFlags: 0
