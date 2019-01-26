@@ -145,14 +145,9 @@ public class DebugTools : MonoBehaviour
             Log(preInstanceMsgs, DebugLevel.WARNING);
     }
 
-    public List<string> GetEntireCommandDescList()
+    public ref List<CommandEventLink> GetEntireCommandList()
     {
-        List<string> cmdDescriptions = new List<string>();
-        foreach(CommandEventLink cmdELink in cmdEventLinks)
-        {
-            cmdDescriptions.Add(cmdELink.CommandDescription);
-        }
-        return cmdDescriptions;
+        return ref cmdEventLinks;
     }
 
     private void InitializeCmdEvenLinks()
@@ -165,14 +160,16 @@ public class DebugTools : MonoBehaviour
                 delegate{ debugCmdM.SetFPS(); },
                 "set fps|<fps integer>" + "\n" +
                 "Sets fps, clamped from 10 - 120" + "\n" +
-                "e.x. set fps|60"
+                "e.x. set fps|60",
+                false
                 ),
 
             new CommandEventLink(
                 "list cmd",
                 delegate{ debugCmdM.ListCmd(); },
                 "list cmd" + "\n" +
-                "Lists entire command list"
+                "Lists entire command list",
+                true
                 ),
 
             new CommandEventLink(
@@ -180,7 +177,8 @@ public class DebugTools : MonoBehaviour
                 delegate{ debugCmdM.GameObjectSetActive(); },
                 "set active|<GameObject name>,<boolean>" + "\n" +
                 "Set GameObject Active State, sets all gameobject with same name" + "\n" +
-                "e.x set active|cube,true"
+                "e.x set active|cube,true",
+                false
                 ),
 
             new CommandEventLink(
@@ -191,7 +189,8 @@ public class DebugTools : MonoBehaviour
                 "send message|<string message>" + "\n" +
                 "Send message to specific gameobject or all gameobjects" + "\n" +
                 "e.x send message|Cube,Explode" + "\n" +
-                "e.x send message|Explode"
+                "e.x send message|Explode",
+                false
                 ),
 
             new CommandEventLink(
@@ -199,7 +198,8 @@ public class DebugTools : MonoBehaviour
                 delegate{ debugCmdM.SetConsoleFontSize(); },
                 "set font size|<Font size integer>" + "\n" +
                 "Sets font size of debug tools console" + "\n" +
-                "e.x set font size|50"
+                "e.x set font size|50",
+                false
                 )
         };
     }
@@ -472,15 +472,18 @@ public class CommandEventLink
     public CommandEventLink(
         string baseCommand, 
         UnityAction targetMethod,
-        string commandDescription
+        string commandDescription,
+        bool quickActionButton
         )
     {
         BaseCommand = baseCommand;
         TargetMethod = targetMethod;
         CommandDescription = commandDescription;
+        QuickActionButton = quickActionButton;
     }
 
     public string BaseCommand { get; set; }
     public UnityAction TargetMethod { get; set; }
     public string CommandDescription { get; set; }
+    public bool QuickActionButton { get; set; }
 }

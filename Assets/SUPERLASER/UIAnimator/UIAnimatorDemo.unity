@@ -168,8 +168,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &42309069
@@ -223,8 +222,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &42309072
@@ -393,8 +391,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &219563032
@@ -448,8 +445,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &219563035
@@ -549,8 +545,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &343345947
@@ -604,8 +599,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &343345950
@@ -705,8 +699,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &376256787
@@ -760,8 +753,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &376256790
@@ -968,8 +960,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &396901716
@@ -988,8 +979,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &396901717
@@ -1089,8 +1079,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &400638868
@@ -1144,8 +1133,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &400638871
@@ -1281,8 +1269,7 @@ MonoBehaviour:
   animateMode: 0
   endPosition: {x: -175, y: 100}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &402956400
@@ -1376,8 +1363,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &445036851
@@ -1431,8 +1417,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &445036854
@@ -1532,8 +1517,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &447699208
@@ -1587,8 +1571,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &447699211
@@ -1688,8 +1671,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &457589625
@@ -1743,8 +1725,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &457589628
@@ -1878,8 +1859,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &480241966
@@ -2045,8 +2025,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &507090575
@@ -2100,8 +2079,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &507090578
@@ -2464,8 +2442,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &634169610
@@ -2600,8 +2577,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &641736373
@@ -2620,8 +2596,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &641736374
@@ -2756,8 +2731,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &643928514
@@ -2776,8 +2750,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &643928515
@@ -2912,8 +2885,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &706739420
@@ -2932,8 +2904,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &706739421
@@ -3067,8 +3038,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &805593267
@@ -3168,8 +3138,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &824269862
@@ -3223,8 +3192,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &824269865
@@ -3304,7 +3272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 646}
+  m_AnchoredPosition: {x: 0, y: 1004}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830066451
@@ -3358,8 +3326,7 @@ MonoBehaviour:
   animateMode: 0
   endPosition: {x: 0, y: 120}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!1 &862024473
@@ -3418,8 +3385,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &862024476
@@ -3473,8 +3439,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &862024479
@@ -3609,8 +3574,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &886595768
@@ -3629,8 +3593,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &886595769
@@ -3765,8 +3728,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &946711551
@@ -3785,8 +3747,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &946711552
@@ -3920,8 +3881,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1027834047
@@ -4123,8 +4083,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1310580949
@@ -4178,8 +4137,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1310580952
@@ -4292,8 +4250,7 @@ MonoBehaviour:
   animateMode: 0
   endPosition: {x: 175, y: 100}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1322220645
@@ -4445,8 +4402,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1343776432
@@ -4465,8 +4421,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1343776433
@@ -4601,8 +4556,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1359368963
@@ -4621,8 +4575,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1359368964
@@ -4757,8 +4710,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1418580041
@@ -4777,8 +4729,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1418580042
@@ -4912,8 +4863,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1575321946
@@ -5207,8 +5157,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1633443447
@@ -5227,8 +5176,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1633443448
@@ -5363,8 +5311,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1666740233
@@ -5383,8 +5330,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1666740234
@@ -5521,8 +5467,7 @@ MonoBehaviour:
   animateMode: 1
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 5}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 400}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!1 &1775194993
@@ -5687,8 +5632,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1838948893
@@ -5822,8 +5766,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1849044020
@@ -5958,8 +5901,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1866548750
@@ -5978,8 +5920,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1866548751
@@ -6079,8 +6020,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1874663256
@@ -6134,8 +6074,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1874663259
@@ -6269,8 +6208,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1915857790
@@ -6404,8 +6342,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1921639228
@@ -6612,8 +6549,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &1987029219
@@ -6632,8 +6568,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &1987029220
@@ -6805,8 +6740,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &2086158899
@@ -6860,8 +6794,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &2086158902
@@ -7005,8 +6938,7 @@ MonoBehaviour:
   animateMode: 0
   endPosition: {x: 0, y: 20}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 20
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &2129694450
@@ -7123,8 +7055,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 1
   scaleAnimSpd: 20
 --- !u!114 &2146419028
@@ -7143,8 +7074,7 @@ MonoBehaviour:
   animateMode: 2
   endPosition: {x: 0, y: 0}
   posAnimSpd: 20
-  rotDir: {x: 0, y: 0, z: 0}
-  rotAnimSpd: 5000
+  rotSpd: {x: 0, y: 0, z: 0}
   endScale: 0
   scaleAnimSpd: 20
 --- !u!114 &2146419029
@@ -7261,6 +7191,7 @@ MonoBehaviour:
   - {fileID: 480241965}
   - {fileID: 1915857789}
   centerPanel: {fileID: 830066453}
+  loadingSpinner: {fileID: 1737934844}
 --- !u!4 &8309214704693656278
 Transform:
   m_ObjectHideFlags: 0

@@ -69,18 +69,18 @@ public class DebugCommandMethods
         text += Environment.NewLine;
         text += "=======================";
 
-        foreach (string cmdDesc in DebugTools.Instance.GetEntireCommandDescList())
+        foreach (CommandEventLink cmdEventLink in DebugTools.Instance.GetEntireCommandList())
         {
             text += Environment.NewLine;
+            text += $"COMMAND: {cmdEventLink.BaseCommand}";
             text += Environment.NewLine;
-            text += cmdDesc;
+            text += $"DESCRIPTION: {cmdEventLink.CommandDescription}";
             text += Environment.NewLine;
         }
+        text += Environment.NewLine;
         text += "=======================";
         text += Environment.NewLine;
-        text += Environment.NewLine;
-
-        DebugTools.Log(text, DebugTools.DebugLevel.COMMAND);
+        DebugTools.Log(text);
     }
 
     public void SetConsoleFontSize()

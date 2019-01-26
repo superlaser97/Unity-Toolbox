@@ -3,35 +3,42 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class AsyncSceneLoader : MonoBehaviour
+namespace SUPERLASER
 {
-    [SerializeField] private Image loadingIndicator;
-    private static string targetScene;
-
-    private void Start()
+    public class AsyncSceneLoader : MonoBehaviour
     {
-        StartCoroutine(LoadNextScene());
-        DontDestroyOnLoad(gameObject);
-    }
+        [SerializeField] private float minLoadingDuration = 0f;
+        private Timer minLoadingTimer = new Timer();
 
-    public static void AsyncLoadScene(string targetScene)
-    {
-        SceneManager.LoadScene("AsyncLoadingScene");
-        AsyncSceneLoader.targetScene = targetScene;
-    }
+        AsyncOperation asyncOperation;
 
-    private IEnumerator LoadNextScene()
-    {
-        loadingIndicator.fillAmount = 0;
-        
-        Scene newScene = SceneManager.GetSceneByName(targetScene);
+        private static string targetScene;
 
-        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(targetScene);
-
-        while (!asyncOperation.isDone)
+        private void Start()
         {
-            loadingIndicator.fillAmount = asyncOperation.progress * 1.111f;
-            yield return null;
+            StartCoroutine(LoadNextScene());
+        }
+
+        public static void AsyncLoadScene(string targetScene)
+        {
+            AsyncSceneLoader.targetScene = targetScene;
+            SceneManager.LoadScene("AsyncLoadingScene");
+        }
+
+        private IEnumerator LoadNextScene()
+        {
+            Scene newScene = SceneManager.GetSceneByName(targetScene);
+            asyncOperation = SceneManager.LoadSceneAsync(targetScene);
+            asyncOperation.allowSceneActivation = false;
+            minLoadingTimer.SetTimer(minLoadingDuration);
+
+            while ((1 - (minLoadingTimer.TimeLeft / minLoadingDuration) < 1))
+            {
+                float loadingProgress = 1 - (minLoadingTimer.TimeLeft / minLoadingDuration);
+
+                yield return null;
+            }
+            asyncOperation.allowSceneActivation = true;
         }
     }
 }

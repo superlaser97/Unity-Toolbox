@@ -36,13 +36,9 @@ namespace SUPERLASER
         private Vector2 initialPosition;
 
         [Header("Rotation Anim Settings")]
-        [SerializeField] private Vector3 rotDir;
-        [SerializeField] private float rotAnimSpd = 5000f;
-        public float RotAnimSpd
-        {
-            get => rotAnimSpd;
-            set => rotAnimSpd = value;
-        }
+        [SerializeField] private Vector3 rotSpd;
+        public enum RotationState { STOPPED, RUNNING }
+        public RotationState CurrRotState { get; set; }
 
         [Header("Scale Anim Settings")]
         [SerializeField] private float endScale = 0;
@@ -68,14 +64,9 @@ namespace SUPERLASER
 
         private void Update()
         {
-            if(AnimMode == AnimateMode.ROTATION)
+            if (animateMode == AnimateMode.ROTATION && CurrRotState == RotationState.RUNNING)
             {
-                transform.rotation = 
-                    Quaternion.Lerp(
-                        transform.rotation, 
-                        transform.rotation * Quaternion.Euler(rotDir), 
-                        Time.deltaTime * RotAnimSpd
-                        );
+                transform.rotation = transform.rotation * Quaternion.Euler(rotSpd.x * Time.deltaTime, rotSpd.y * Time.deltaTime, rotSpd.z * Time.deltaTime);
             }
         }
 
@@ -240,6 +231,24 @@ namespace SUPERLASER
                     if (GUILayout.Button("Animate to Opposite"))
                     {
                         editorTarget.Animate_Scale_ToOpposite();
+                    }
+                }
+
+                if (editorTarget.AnimMode == UIAnimator.AnimateMode.ROTATION)
+                {
+                    EditorGUILayout.LabelField("Rotation Anim Control", EditorStyles.boldLabel);
+                    if (GUILayout.Button("Animate to Stop"))
+                    {
+                        editorTarget.CurrRotState = UIAnimator.RotationState.STOPPED;
+                    }
+                    if (GUILayout.Button("Animate to Running"))
+                    {
+                        editorTarget.CurrRotState = UIAnimator.RotationState.RUNNING;
+                    }
+                    if (GUILayout.Button("Animate to Opposite"))
+                    {
+                        editorTarget.CurrRotState = editorTarget.CurrRotState == 
+                            UIAnimator.RotationState.RUNNING ? UIAnimator.RotationState.STOPPED : UIAnimator.RotationState.RUNNING;
                     }
                 }
             }

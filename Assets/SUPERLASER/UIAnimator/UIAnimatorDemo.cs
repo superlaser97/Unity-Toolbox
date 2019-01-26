@@ -15,6 +15,7 @@ public class UIAnimatorDemo : MonoBehaviour
     [SerializeField] private List<UIAnimator> rightBoxAnim;
     [SerializeField] private List<UIAnimator> btmBoxesAnim;
     [SerializeField] private UIAnimator centerPanel;
+    [SerializeField] private UIAnimator loadingSpinner;
 
     private void Start()
     {
@@ -66,5 +67,8 @@ public class UIAnimatorDemo : MonoBehaviour
             yield return new WaitForEndOfFrame();
             anim?.Animate_Scale_ToOpposite();
         }
+
+        loadingSpinner.CurrRotState = loadingSpinner.CurrRotState ==
+            UIAnimator.RotationState.RUNNING ? UIAnimator.RotationState.STOPPED : UIAnimator.RotationState.RUNNING;
     }
 }
