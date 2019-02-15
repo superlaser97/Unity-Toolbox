@@ -29,8 +29,8 @@ namespace SUPERLASER
         [SerializeField] private float posAnimSpd = 20f;
         public float PosAnimSpd
         {
-            get => posAnimSpd;
-            set => posAnimSpd = value;
+            get { return posAnimSpd; }
+            set { posAnimSpd = value; }
         }
         private Location posDir = Location.INITIAL;
         private Vector2 initialPosition;
@@ -45,8 +45,8 @@ namespace SUPERLASER
         [SerializeField] private float scaleAnimSpd = 20f;
         public float ScaleAnimSpd
         {
-            get => scaleAnimSpd;
-            set => scaleAnimSpd = value;
+            get { return scaleAnimSpd; }
+            set { scaleAnimSpd = value; }
         }
         private Location scaleDir = Location.INITIAL;
         private float initialScale;
@@ -222,7 +222,7 @@ namespace SUPERLASER
                     EditorGUILayout.LabelField("Scale Anim Control", EditorStyles.boldLabel);
                     if (GUILayout.Button("Animate to Initial"))
                     {
-                        editorTarget.Animate_Scale(UIAnimator.Location.END);
+                        editorTarget.Animate_Scale(UIAnimator.Location.INITIAL);
                     }
                     if (GUILayout.Button("Animate to End"))
                     {
