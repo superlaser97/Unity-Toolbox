@@ -32,12 +32,14 @@ public class DebugTools : MonoBehaviour
     private Vector2 touch1InitialPos = Vector2.zero;
     private Vector2 touch2InitialPos = Vector2.zero;
 
-    [Header("UI Elements")]
+    [Header("UI References")]
     [SerializeField] private RectTransform panel;
     [SerializeField] private TextMeshProUGUI debugText;
     [SerializeField] private GameObject fpsCounter;
     [SerializeField] private TMP_InputField commandInputField;
     [SerializeField] private Button sendCmdBtn;
+    [SerializeField] private GameObject quickActionBtnPanel;
+    [SerializeField] private GameObject quickActionBtn_Prefab;
 
     [Header("Text Peferences")]
     [SerializeField] private Color normalTextColor;
@@ -81,13 +83,7 @@ public class DebugTools : MonoBehaviour
 
     // Msgs that are logged before debug console starts
     private static string preInstanceMsgs = string.Empty;
-
-    public string consoleParam { get; private set; } = string.Empty;
-
-    // For logging into text file
-    private StreamWriter sw;
-    private const string LOG_FILE_PARTIAL_PATH = "Logs";
-    private const string LOG_FILE_BASE_NAME = "log_";
+    private string consoleParam = string.Empty;
 
     private void OnEnable()
     {
@@ -122,20 +118,6 @@ public class DebugTools : MonoBehaviour
     {
         panel.gameObject.SetActive(false);
 
-        Directory.CreateDirectory(Path.Combine(Application.persistentDataPath, LOG_FILE_PARTIAL_PATH));
-
-        string logFileName = Path.Combine(
-                Application.persistentDataPath,
-                LOG_FILE_PARTIAL_PATH,
-                LOG_FILE_BASE_NAME +
-                (DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString())
-                .Replace(@"/", "-").Replace(@":", " ") + ".txt"
-                );
-
-        sw = new StreamWriter(logFileName, true);
-        Log("Log file created at " + logFileName);
-        Log(Environment.NewLine);
-
         InitializeCmdEvenLinks();
 
         sendCmdBtn.onClick.AddListener(delegate { OnSendCmdBtnClick(); });
@@ -145,9 +127,14 @@ public class DebugTools : MonoBehaviour
             Log(preInstanceMsgs, DebugLevel.WARNING);
     }
 
-    public ref List<CommandEventLink> GetEntireCommandList()
+    public List<string> GetEntireCommandList()
     {
-        return ref cmdEventLinks;
+        List<string> cmdList = new List<string>();
+        foreach (CommandEventLink cmdELink in cmdEventLinks)
+        {
+            cmdList.Add(cmdELink.BaseCommand + "\n" + cmdELink.CommandDescription);
+        }
+        return cmdList;
     }
 
     private void InitializeCmdEvenLinks()
@@ -156,52 +143,77 @@ public class DebugTools : MonoBehaviour
         {
             // Base Commands
             new CommandEventLink(
-                "set fps",
-                delegate{ debugCmdM.SetFPS(); },
-                "set fps|<fps integer>" + "\n" +
+                "set fps", // Base Command
+                delegate{ debugCmdM.SetFPS(consoleParam); }, // Delegate for executing command
+                "set fps|<fps integer>" + "\n" + // Descriptions
                 "Sets fps, clamped from 10 - 120" + "\n" +
                 "e.x. set fps|60",
-                false
+                false, // Show QuickActionButton in DebugTools Console
+                true // Command with Parameters
                 ),
 
             new CommandEventLink(
                 "list cmd",
                 delegate{ debugCmdM.ListCmd(); },
-                "list cmd" + "\n" +
                 "Lists entire command list",
-                true
-                ),
-
-            new CommandEventLink(
-                "set active",
-                delegate{ debugCmdM.GameObjectSetActive(); },
-                "set active|<GameObject name>,<boolean>" + "\n" +
-                "Set GameObject Active State, sets all gameobject with same name" + "\n" +
-                "e.x set active|cube,true",
+                true,
                 false
                 ),
 
             new CommandEventLink(
+                "set active",
+                delegate{ debugCmdM.GameObjectSetActive(consoleParam); },
+                "set active|<GameObject name>,<boolean>" + "\n" +
+                "Set GameObject Active State, sets all gameobject with same name" + "\n" +
+                "e.x set active|cube,true",
+                false,
+                true
+                ),
+
+            new CommandEventLink(
                 "send message",
-                delegate{ debugCmdM.SendMessageToAllGO(); },
+                delegate{ debugCmdM.SendMessageToAllGO(consoleParam); },
                 "Send Message to all GameObjects -> " + "\n" +
                 "send message|<GameObject name>,<string message>" + "\n" +
                 "send message|<string message>" + "\n" +
                 "Send message to specific gameobject or all gameobjects" + "\n" +
                 "e.x send message|Cube,Explode" + "\n" +
                 "e.x send message|Explode",
-                false
+                false,
+                true
                 ),
 
             new CommandEventLink(
                 "set font size",
-                delegate{ debugCmdM.SetConsoleFontSize(); },
+                delegate{ debugCmdM.SetConsoleFontSize(consoleParam); },
                 "set font size|<Font size integer>" + "\n" +
                 "Sets font size of debug tools console" + "\n" +
                 "e.x set font size|50",
+                true,
+                true
+                ),
+            new CommandEventLink(
+                "quit app",
+                delegate{ Application.Quit(); },
+                "Exits the app",
+                true,
                 false
-                )
+                ),
         };
+
+        foreach (CommandEventLink link in cmdEventLinks)
+        {
+            if (link.QuickActionButton == false)
+                continue;
+
+            GameObject btn = Instantiate(quickActionBtn_Prefab, quickActionBtnPanel.transform);
+            btn.GetComponentInChildren<TMP_Text>().text = link.BaseCommand;
+
+            if (link.HasParameters)
+                btn.GetComponent<Button>().onClick.AddListener(delegate { commandInputField.text = link.BaseCommand + "|"; });
+            else
+                btn.GetComponent<Button>().onClick.AddListener(delegate { commandInputField.text = link.BaseCommand; });
+        }
     }
 
     private void Update()
@@ -218,11 +230,11 @@ public class DebugTools : MonoBehaviour
         if (!Input.GetKey(keyModifier1) || !Input.GetKey(keyModifier2))
             return;
 
-        if(Input.GetKeyDown(showDebugToolsConsoleKey))
+        if (Input.GetKeyDown(showDebugToolsConsoleKey))
         {
             ShowDebugToolsConsole();
         }
-        else if(Input.GetKey(toggleFPSCounterKey))
+        else if (Input.GetKey(toggleFPSCounterKey))
         {
             ToggleFPSCounter();
         }
@@ -323,7 +335,7 @@ public class DebugTools : MonoBehaviour
 
     private void HideDebugToolsConsole()
     {
-        panel.gameObject.SetActive(true);
+        panel.gameObject.SetActive(false);
     }
 
     public void SetDebugFontSize(int size)
@@ -402,13 +414,6 @@ public class DebugTools : MonoBehaviour
                 Debug.Log(msg);
                 break;
         }
-
-        if(sw != null)
-        {
-            sw.Write(msg);
-            sw.Write(Environment.NewLine);
-            sw.Flush();
-        }
     }
 
     public void ProcessDebugCommand(string cmd)
@@ -417,7 +422,7 @@ public class DebugTools : MonoBehaviour
 
         string baseCommand = string.Empty;
 
-        if(cmd.Contains("|"))
+        if (cmd.Contains("|"))
         {
             string[] splitCmd = cmd.Split('|');
             baseCommand = splitCmd[0];
@@ -428,7 +433,7 @@ public class DebugTools : MonoBehaviour
             baseCommand = cmd;
         }
 
-        if(cmdEventLinks.Exists(x => x.BaseCommand == baseCommand.ToLower()))
+        if (cmdEventLinks.Exists(x => x.BaseCommand == baseCommand.ToLower()))
         {
             cmdEventLinks.Find(x => x.BaseCommand == baseCommand).TargetMethod.Invoke();
             consoleParam = string.Empty;
@@ -449,7 +454,7 @@ public class DebugTools : MonoBehaviour
     {
         debugText.text = string.Empty;
     }
-    
+
     public int GetKeyboardSize()
     {
         using (AndroidJavaClass UnityClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
@@ -470,20 +475,23 @@ public class DebugTools : MonoBehaviour
 public class CommandEventLink
 {
     public CommandEventLink(
-        string baseCommand, 
+        string baseCommand,
         UnityAction targetMethod,
         string commandDescription,
-        bool quickActionButton
+        bool quickActionButton,
+        bool hasParameters
         )
     {
         BaseCommand = baseCommand;
         TargetMethod = targetMethod;
         CommandDescription = commandDescription;
         QuickActionButton = quickActionButton;
+        HasParameters = hasParameters;
     }
 
     public string BaseCommand { get; set; }
     public UnityAction TargetMethod { get; set; }
     public string CommandDescription { get; set; }
     public bool QuickActionButton { get; set; }
+    public bool HasParameters { get; set; }
 }
