@@ -35,7 +35,6 @@ public class DebugTools : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private RectTransform panel;
     [SerializeField] private TextMeshProUGUI debugText;
-    [SerializeField] private GameObject fpsCounter;
     [SerializeField] private TMP_InputField commandInputField;
     [SerializeField] private Button sendCmdBtn;
     [SerializeField] private GameObject quickActionBtnPanel;
@@ -51,22 +50,12 @@ public class DebugTools : MonoBehaviour
     [SerializeField] private bool enableTimestamp = true;
 
     [Header("Key Bindings")]
-#if UNITY_EDITOR
-    [ReadOnly]
-#endif
+    [NaughtyAttributes.ReadOnly]
     [SerializeField] private KeyCode keyModifier1 = KeyCode.LeftShift;
-#if UNITY_EDITOR
-    [ReadOnly]
-#endif
-    [SerializeField] private KeyCode keyModifier2 = KeyCode.Z; 
-#if UNITY_EDITOR
-    [ReadOnly]
-#endif
+    [NaughtyAttributes.ReadOnly]
+    [SerializeField] private KeyCode keyModifier2 = KeyCode.Z;
+    [NaughtyAttributes.ReadOnly]
     [SerializeField] private KeyCode showDebugToolsConsoleKey = KeyCode.D;
-#if UNITY_EDITOR
-    [ReadOnly]
-#endif
-    [SerializeField] private KeyCode toggleFPSCounterKey = KeyCode.F;
 
     private List<CommandEventLink> cmdEventLinks;
     private DebugCommandMethods debugCmdM = new DebugCommandMethods();
@@ -234,10 +223,6 @@ public class DebugTools : MonoBehaviour
         {
             ShowDebugToolsConsole();
         }
-        else if (Input.GetKey(toggleFPSCounterKey))
-        {
-            ToggleFPSCounter();
-        }
     }
 
     private void GestureTrackingUpdate()
@@ -276,7 +261,6 @@ public class DebugTools : MonoBehaviour
             case GestureDir.LEFT:
                 break;
             case GestureDir.RIGHT:
-                ToggleFPSCounter();
                 break;
         }
         gestureActionExecuted = true;
@@ -321,11 +305,6 @@ public class DebugTools : MonoBehaviour
         }
 
         return GestureDir.NULL;
-    }
-
-    private void ToggleFPSCounter()
-    {
-        fpsCounter.SetActive(!fpsCounter.activeInHierarchy);
     }
 
     private void ShowDebugToolsConsole()
