@@ -624,7 +624,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a56269fc802e5a9458c7f5cf25ce2002, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8c3b91a050611ec449d80416a56e9c45, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -836,7 +836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000029379362, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &3548614669375757040
@@ -1213,7 +1213,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panel: {fileID: 4965872575109074988}
   debugText: {fileID: 4796317509401466211}
-  fpsCounter: {fileID: 0}
   commandInputField: {fileID: 3169623912007809831}
   sendCmdBtn: {fileID: 315589549209713619}
   quickActionBtnPanel: {fileID: 3044977328694002163}
@@ -1227,7 +1226,6 @@ MonoBehaviour:
   keyModifier1: 304
   keyModifier2: 122
   showDebugToolsConsoleKey: 100
-  toggleFPSCounterKey: 102
 --- !u!1 &6640611070568031713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +1958,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &5939437535942690814
